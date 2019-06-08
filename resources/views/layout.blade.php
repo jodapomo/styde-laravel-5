@@ -6,7 +6,8 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Sticky Footer Navbar Template · Bootstrap</title>
+
+    <title>@yield('title') - Styde</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sticky-footer-navbar/">
 
