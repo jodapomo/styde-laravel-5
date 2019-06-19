@@ -13,7 +13,7 @@
     @else
         <ul>
             @foreach ($users as $user)
-                <li>{{ $user }}</li>
+                <li>{{ $user->name }}</li>
             @endforeach
         </ul>
     @endempty
@@ -24,5 +24,4 @@
 
 @section('sidebar')
     @parent
-    <h2>Sidebar personalizada</h2>
 @endsection
