@@ -11,14 +11,27 @@
 |
 */
 
-Route::get('/', function () {
-    return 'Home';
-});
 
-Route::get('users', 'UserController@index');
+Route::get('/', 'UserController@index')
+    ->name('users.index');
 
-Route::get('users/new', 'UserController@create');
+Route::get('users/new', 'UserController@create')
+    ->name('users.create');
 
-Route::get('users/{id}', 'UserController@show')
-    ->where('id', '[0-9]+');
+Route::get('users/{user}/edit', 'UserController@edit')
+    ->name('users.edit');
+
+Route::post('users', 'UserController@store');
+
+Route::get('users/{user}', 'UserController@show')
+    ->where('user', '[0-9]+')
+    ->name('users.show');
+
+Route::put('users/{user}', 'UserController@update')
+    ->where('user', '[0-9]+')
+    ->name('users.update');
+
+Route::delete('users/{user}', 'UserController@destroy')
+    ->where('user', '[0-9]+')
+    ->name('users.destroy');
 
